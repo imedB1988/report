@@ -9,7 +9,7 @@ pipeline {
 
     stage('install dependencies') {
       steps {
-        sh 'npm i'
+        sh 'npm cache clean -f && rm -rf node_modules && npm i'
       }
     }
 
