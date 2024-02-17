@@ -1,21 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('change directory') {
+    stage('run test ') {
       steps {
-        sh 'cd curriculum-front'
-      }
-    }
-
-    stage('install dependencies') {
-      steps {
-        sh 'npm install'
-      }
-    }
-
-    stage('test') {
-      steps {
-        sh 'npm run test:unit'
+        sh 'cd curriculum-front && npm install && npm run test:unit'
       }
     }
 
